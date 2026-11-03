@@ -1,0 +1,4 @@
+# Airline Satisfaction — E8 Teacher and Route Ensemble
+Runs entirely on Kaggle GPU. Reuses the E7 five-fold seed42 protocol and fixed 3-epoch/8-network RealMLP recipe. Retrains E7 as a matched control, tests an original-data teacher probability as one continuous additional neural feature, and independently trains an original-teacher/route-feature LightGBM. All encoders/routes fit within outer-train. Exact original/competition feature matches are excluded from teacher training. Saves raw OOF/test predictions, models and a small fixed-grid blend with conditional meta evaluation. No automatic submission.
+
+Credits: [Vladimir Demidov](https://www.kaggle.com/code/yekenot/ps-s6-e10-realmlp-pytabkit) and [MathsOnChain](https://www.kaggle.com/code/mathsonchain/s6e10-lgbm-trasy), Apache 2.0 notebooks. External data: [Airline Passenger Satisfaction](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction).

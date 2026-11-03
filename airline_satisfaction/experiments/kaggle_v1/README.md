@@ -1,0 +1,1 @@
+Kaggle-only restart of experiment 1. Upload airline_kaggle_experiment1.ipynb, attach the competition, enable GPU and Internet, and Save & Run All. Local computation is blocked by an explicit environment guard. Training/inference code is embedded in the notebook. Previous local attempts remain in ../v1 and are not completed results.

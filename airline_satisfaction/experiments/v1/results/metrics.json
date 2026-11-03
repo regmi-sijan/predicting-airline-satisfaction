@@ -1,0 +1,78 @@
+{
+  "config": {
+    "seed": 42,
+    "context": 16384,
+    "estimators": 2,
+    "checkpoint_sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+    "train_sha256": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "test_sha256": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "source_sha256": "7c92ab4813b38499c60e0be3a5580ff036aa00d1930bbe902fefa1732efa0da1",
+    "packages": {
+      "tabicl": "2.2.0",
+      "torch": "2.14.1",
+      "lightgbm": "4.7.0",
+      "scikit-learn": "1.9.1",
+      "pandas": "2.3.3",
+      "numpy": "2.5.4"
+    }
+  },
+  "fingerprint": "2943b71587c7f4c8d52313dbfb9adfecc569981099f1fdb52f6beaae03c934a7",
+  "context_rows": 16384,
+  "best_lgb_iteration": 1059,
+  "selection_candidates": [
+    {
+      "tabicl_weight": 0.0,
+      "auc": 0.9588212049418499,
+      "log_loss": 0.22772200941394072,
+      "brier": 0.06090656540949678
+    },
+    {
+      "tabicl_weight": 0.25,
+      "auc": 0.9587842962552628,
+      "log_loss": 0.22767060775435088,
+      "brier": 0.06084536479640694
+    },
+    {
+      "tabicl_weight": 0.5,
+      "auc": 0.9584059538563691,
+      "log_loss": 0.22878940627074554,
+      "brier": 0.061159858583523366
+    },
+    {
+      "tabicl_weight": 0.75,
+      "auc": 0.9575125639768666,
+      "log_loss": 0.23120812992540413,
+      "brier": 0.06185004674903421
+    },
+    {
+      "tabicl_weight": 1.0,
+      "auc": 0.9558077664265064,
+      "log_loss": 0.23541955764567188,
+      "brier": 0.06291592935837508
+    }
+  ],
+  "selected_tabicl_weight": 0.0,
+  "report": {
+    "tabicl": {
+      "auc": 0.9545726038705254,
+      "log_loss": 0.24028781056404114,
+      "brier": 0.06461814045906067
+    },
+    "lightgbm": {
+      "auc": 0.95747085329087,
+      "log_loss": 0.23157256497320347,
+      "brier": 0.06210117864966082
+    },
+    "selected": {
+      "auc": 0.95747085329087,
+      "log_loss": 0.23157256497320347,
+      "brier": 0.06210117864966082
+    }
+  },
+  "notes": [
+    "Report partition never selects weights, context, preprocessing, or stopping iteration.",
+    "One fixed stratified holdout, not cross-validation. Public test score is separate.",
+    "TabICLv2 frozen pretrained weights; 16384 labeled context rows by default; no gradient fine-tuning.",
+    "Final deployment refits context and LightGBM using all available labeled rows."
+  ]
+}

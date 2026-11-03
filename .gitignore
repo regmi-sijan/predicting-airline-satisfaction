@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+housing_prices/data/*
+housing_prices/outputs/*
+airline_satisfaction/data/
+airline_satisfaction/models/
+airline_satisfaction/model_cache/
+airline_satisfaction/experiments/v1/results/cache_*/
+airline_satisfaction/experiments/v1/results/*.csv
